@@ -2,7 +2,6 @@ using Microsoft.VisualBasic.Logging;
 using Newtonsoft.Json;
 using System.Diagnostics;
 using System.Windows.Forms;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace MSTSC_Manager
 {
