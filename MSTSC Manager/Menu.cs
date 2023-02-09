@@ -2,6 +2,7 @@ using Microsoft.VisualBasic.Logging;
 using Newtonsoft.Json;
 using System.Diagnostics;
 using System.Windows.Forms;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace MSTSC_Manager
 {
@@ -10,6 +11,7 @@ namespace MSTSC_Manager
         private Configuration configuration;
         private string configurationFile;
         private Serveur selectedServer;
+        private int lastIndex = -1;
 
 
         public Menu()
@@ -23,33 +25,50 @@ namespace MSTSC_Manager
             this.loadConfiguration();
         }
 
+        
         private void Menu_FormClosing(object sender, FormClosingEventArgs e)
         {
             this.saveConfiguration();
         }
         
+        
+        private void listBoxServeurs_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            int index = this.listBoxServeurs.IndexFromPoint(e.Location);
+            if (index != ListBox.NoMatches)
+            {
+                this.buttonConnexion_Click(null, new EventArgs());
+            }
+        }
+
 
         private void listBoxServeurs_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (this.listBoxServeurs.SelectedIndex > 0)
+            int index = this.listBoxServeurs.SelectedIndex;
+            if (index > 0)
             {
-                this.selectedServer = this.configuration.serveurs.Find(x =>
-                    x.nom.Equals(this.listBoxServeurs.SelectedItem.ToString()));
-                
-                this.buttonAjouter.Enabled = false;
-                this.buttonModifier.Enabled = true;
-                this.buttonSupprimer.Enabled = true;
-                this.buttonConnexion.Enabled = true;
+                if (index != this.lastIndex)
+                {
+                    this.selectedServer = this.configuration.serveurs.Find(x =>
+                        x.nom.Equals(this.listBoxServeurs.SelectedItem.ToString()));
 
-                Serveur serveur = this.selectedServer;
-                this.textBoxNom.Text = serveur.nom;
-                this.textBoxAdresse.Text = serveur.adresse;
-                this.textBoxDescription.Text = serveur.description;
-                this.checkBoxGlobale.Checked = serveur.utiliserAuthentificationGlobale;
+                    this.buttonAjouter.Enabled = false;
+                    this.buttonModifier.Enabled = true;
+                    this.buttonSupprimer.Enabled = true;
+                    this.buttonConnexion.Enabled = true;
 
-                Authentification authentification = serveur.authentification;
-                this.textBoxIdentifiant.Text = authentification.identifiant;
-                this.textBoxMotDePasse.Text = authentification.motDePasse;
+                    Serveur serveur = this.selectedServer;
+                    this.textBoxNom.Text = serveur.nom;
+                    this.textBoxAdresse.Text = serveur.adresse;
+                    this.textBoxDescription.Text = serveur.description;
+                    this.checkBoxGlobale.Checked = serveur.utiliserAuthentificationGlobale;
+
+                    Authentification authentification = serveur.authentification;
+                    this.textBoxIdentifiant.Text = authentification.identifiant;
+                    this.textBoxMotDePasse.Text = authentification.motDePasse;
+
+                    this.lastIndex = index;
+                }
             }
             else
             {
@@ -139,8 +158,17 @@ namespace MSTSC_Manager
         
         private void buttonSupprimer_Click(object sender, EventArgs e)
         {
-            this.configuration.serveurs.Remove(this.selectedServer);
-            this.listBoxServeurs.Items.Remove(this.listBoxServeurs.SelectedItem);
+            Serveur serveur = this.selectedServer;
+            if (MessageBox.Show(
+                $"Êtes-vous sure de vouloir supprimer le serveur \"{serveur.nom}\" ?",
+                this.Text,
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question,
+                MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            {
+                this.configuration.serveurs.Remove(serveur);
+                this.listBoxServeurs.Items.Remove(this.listBoxServeurs.SelectedItem);
+            }
         }
 
         

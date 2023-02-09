@@ -97,6 +97,7 @@
             this.listBoxServeurs.Size = new System.Drawing.Size(275, 229);
             this.listBoxServeurs.TabIndex = 0;
             this.listBoxServeurs.SelectedIndexChanged += new System.EventHandler(this.listBoxServeurs_SelectedIndexChanged);
+            this.listBoxServeurs.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listBoxServeurs_MouseDoubleClick);
             // 
             // textBoxDescription
             // 
