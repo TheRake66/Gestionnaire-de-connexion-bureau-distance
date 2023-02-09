@@ -97,7 +97,7 @@ namespace MSTSC_Manager
                 serveur.nom = this.textBoxNom.Text.Trim();
                 serveur.adresse = this.textBoxAdresse.Text.Trim();
                 serveur.description = this.textBoxDescription.Text.Trim();
-                serveur.utiliserAuthentificationGlobale = !this.checkBoxGlobale.Checked;
+                serveur.utiliserAuthentificationGlobale = this.checkBoxGlobale.Checked;
 
                 Authentification authentification = new Authentification();
                 authentification.identifiant = this.textBoxIdentifiant.Text.Trim();
