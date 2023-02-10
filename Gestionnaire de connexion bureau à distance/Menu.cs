@@ -238,6 +238,18 @@ namespace MSTSC_Manager
             this.configuration.parametres.uniquementMotDePasse = this.checkBoxUniquement.Checked;
         }
 
+        private void buttonGithub_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Process.Start(new ProcessStartInfo("https://github.com/TheRake66/Gestionnaire-de-connexion-bureau-distance") { UseShellExecute = true });
+            }
+            catch
+            {
+
+            }
+        }
+
 
         private void loadConfiguration()
         {

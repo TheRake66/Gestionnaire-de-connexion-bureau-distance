@@ -7,18 +7,20 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Title>MSTSC Manager</Title>
-    <Version>1.2.1.0</Version>
+    <Title>Gestionnaire de connexion bureau à distance</Title>
+    <Version>1.4.1.0</Version>
     <Authors>Thibault BUSTOS (alias TheRake66)</Authors>
     <Company />
-    <Product>MSTSC Manager</Product>
-    <Description>Outil de gestion MSTSC.</Description>
+    <Product>Gestionnaire de connexion bureau à distance</Product>
+    <Description>Gestionnaire de connexion bureau à distance.
+</Description>
     <Copyright>© Thibault BUSTOS (alias TheRake66) - 2023</Copyright>
     <PackageIcon>logo - Copie.png</PackageIcon>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/TheRake66/MSTSC-Manager</RepositoryUrl>
     <NeutralLanguage>fr-FR</NeutralLanguage>
     <ApplicationIcon>logo.ico</ApplicationIcon>
+    <AssemblyName>Gestionnaire de connexion bureau à distance</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
