@@ -462,6 +462,7 @@
             // 
             // linkLabelGithub
             // 
+            this.linkLabelGithub.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.linkLabelGithub.AutoSize = true;
             this.linkLabelGithub.Location = new System.Drawing.Point(12, 430);
             this.linkLabelGithub.Margin = new System.Windows.Forms.Padding(0);
