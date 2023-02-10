@@ -238,7 +238,8 @@ namespace MSTSC_Manager
             this.configuration.parametres.uniquementMotDePasse = this.checkBoxUniquement.Checked;
         }
 
-        private void buttonGithub_Click(object sender, EventArgs e)
+        
+        private void linkLabelGithub_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             try
             {

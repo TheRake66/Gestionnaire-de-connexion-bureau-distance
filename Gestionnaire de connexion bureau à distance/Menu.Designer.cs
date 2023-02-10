@@ -57,8 +57,8 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.buttonGithub = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.linkLabelGithub = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarSeconde)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -256,8 +256,8 @@
             this.buttonConnexion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonConnexion.Enabled = false;
             this.buttonConnexion.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonConnexion.Location = new System.Drawing.Point(265, 422);
-            this.buttonConnexion.Margin = new System.Windows.Forms.Padding(0, 0, 12, 0);
+            this.buttonConnexion.Location = new System.Drawing.Point(362, 422);
+            this.buttonConnexion.Margin = new System.Windows.Forms.Padding(0);
             this.buttonConnexion.Name = "buttonConnexion";
             this.buttonConnexion.Size = new System.Drawing.Size(85, 30);
             this.buttonConnexion.TabIndex = 5;
@@ -347,6 +347,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(16, 10);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
@@ -414,7 +415,7 @@
             this.tabPage3.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(12);
-            this.tabPage3.Size = new System.Drawing.Size(707, 558);
+            this.tabPage3.Size = new System.Drawing.Size(427, 350);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Authentification globale";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -427,7 +428,7 @@
             this.tabPage4.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(12);
-            this.tabPage4.Size = new System.Drawing.Size(707, 558);
+            this.tabPage4.Size = new System.Drawing.Size(427, 350);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Délai de saisie du mot de passe";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -441,27 +442,14 @@
             this.tabPage5.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(12);
-            this.tabPage5.Size = new System.Drawing.Size(707, 558);
+            this.tabPage5.Size = new System.Drawing.Size(427, 350);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Paramètres";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
-            // buttonGithub
-            // 
-            this.buttonGithub.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonGithub.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonGithub.Location = new System.Drawing.Point(362, 422);
-            this.buttonGithub.Margin = new System.Windows.Forms.Padding(0);
-            this.buttonGithub.Name = "buttonGithub";
-            this.buttonGithub.Size = new System.Drawing.Size(85, 30);
-            this.buttonGithub.TabIndex = 8;
-            this.buttonGithub.Text = "Github";
-            this.buttonGithub.UseVisualStyleBackColor = true;
-            this.buttonGithub.Click += new System.EventHandler(this.buttonGithub_Click);
-            // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.buttonGithub);
+            this.panel2.Controls.Add(this.linkLabelGithub);
             this.panel2.Controls.Add(this.buttonConnexion);
             this.panel2.Controls.Add(this.tabControl1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -471,6 +459,18 @@
             this.panel2.Padding = new System.Windows.Forms.Padding(12);
             this.panel2.Size = new System.Drawing.Size(459, 464);
             this.panel2.TabIndex = 9;
+            // 
+            // linkLabelGithub
+            // 
+            this.linkLabelGithub.AutoSize = true;
+            this.linkLabelGithub.Location = new System.Drawing.Point(12, 430);
+            this.linkLabelGithub.Margin = new System.Windows.Forms.Padding(0);
+            this.linkLabelGithub.Name = "linkLabelGithub";
+            this.linkLabelGithub.Size = new System.Drawing.Size(140, 15);
+            this.linkLabelGithub.TabIndex = 9;
+            this.linkLabelGithub.TabStop = true;
+            this.linkLabelGithub.Text = "⇱ Ouvrir le dépôt GitHub";
+            this.linkLabelGithub.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelGithub_LinkClicked);
             // 
             // Menu
             // 
@@ -502,6 +502,7 @@
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -536,7 +537,7 @@
         private TabPage tabPage3;
         private TabPage tabPage4;
         private TabPage tabPage5;
-        private Button buttonGithub;
         private Panel panel2;
+        private LinkLabel linkLabelGithub;
     }
 }
