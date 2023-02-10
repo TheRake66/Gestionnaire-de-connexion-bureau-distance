@@ -168,7 +168,7 @@
             this.textBoxMotDePasseGlobale.Margin = new System.Windows.Forms.Padding(0);
             this.textBoxMotDePasseGlobale.Name = "textBoxMotDePasseGlobale";
             this.textBoxMotDePasseGlobale.PlaceholderText = "Mot de passe";
-            this.textBoxMotDePasseGlobale.Size = new System.Drawing.Size(683, 23);
+            this.textBoxMotDePasseGlobale.Size = new System.Drawing.Size(403, 23);
             this.textBoxMotDePasseGlobale.TabIndex = 1;
             this.textBoxMotDePasseGlobale.UseSystemPasswordChar = true;
             this.textBoxMotDePasseGlobale.TextChanged += new System.EventHandler(this.textBoxMotDePasseGlobale_TextChanged);
@@ -181,7 +181,7 @@
             this.textBoxIdentifiantGlobale.Margin = new System.Windows.Forms.Padding(0, 0, 0, 12);
             this.textBoxIdentifiantGlobale.Name = "textBoxIdentifiantGlobale";
             this.textBoxIdentifiantGlobale.PlaceholderText = "Identifiant";
-            this.textBoxIdentifiantGlobale.Size = new System.Drawing.Size(683, 23);
+            this.textBoxIdentifiantGlobale.Size = new System.Drawing.Size(403, 23);
             this.textBoxIdentifiantGlobale.TabIndex = 0;
             this.textBoxIdentifiantGlobale.TextChanged += new System.EventHandler(this.textBoxIdentifiantGlobale_TextChanged);
             // 
@@ -229,7 +229,7 @@
             // 
             this.labelSeconde.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelSeconde.AutoSize = true;
-            this.labelSeconde.Location = new System.Drawing.Point(323, 57);
+            this.labelSeconde.Location = new System.Drawing.Point(183, 57);
             this.labelSeconde.Margin = new System.Windows.Forms.Padding(0);
             this.labelSeconde.Name = "labelSeconde";
             this.labelSeconde.Size = new System.Drawing.Size(60, 15);
@@ -246,7 +246,7 @@
             this.trackBarSeconde.Margin = new System.Windows.Forms.Padding(0);
             this.trackBarSeconde.Minimum = 1;
             this.trackBarSeconde.Name = "trackBarSeconde";
-            this.trackBarSeconde.Size = new System.Drawing.Size(683, 45);
+            this.trackBarSeconde.Size = new System.Drawing.Size(403, 45);
             this.trackBarSeconde.TabIndex = 0;
             this.trackBarSeconde.Value = 1;
             this.trackBarSeconde.Scroll += new System.EventHandler(this.trackBarSeconde_Scroll);
