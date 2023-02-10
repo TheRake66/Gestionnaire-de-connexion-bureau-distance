@@ -1,2 +1,2 @@
-# MSTSC-Manager
-Outil de gestion MSTSC.
+# Gestionnaire de connexion bureau à distance
+Gestionnaire de connexion bureau à distance.
