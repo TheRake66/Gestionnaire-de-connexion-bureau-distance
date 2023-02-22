@@ -8,7 +8,7 @@
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
     <Title>Gestionnaire de connexion bureau à distance</Title>
-    <Version>1.4.5.0</Version>
+    <Version>1.4.6.0</Version>
     <Authors>Thibault BUSTOS (alias TheRake66)</Authors>
     <Company />
     <Product>Gestionnaire de connexion bureau à distance</Product>

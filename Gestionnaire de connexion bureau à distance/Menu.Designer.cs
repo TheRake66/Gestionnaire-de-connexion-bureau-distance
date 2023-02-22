@@ -51,7 +51,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabControlMenu = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -62,7 +62,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBarSeconde)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.tabControl1.SuspendLayout();
+            this.tabControlMenu.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -357,23 +357,23 @@
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
-            // tabControl1
+            // tabControlMenu
             // 
-            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.tabControlMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Controls.Add(this.tabPage5);
-            this.tabControl1.Location = new System.Drawing.Point(12, 12);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(12);
-            this.tabControl1.Multiline = true;
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(435, 398);
-            this.tabControl1.TabIndex = 7;
+            this.tabControlMenu.Controls.Add(this.tabPage1);
+            this.tabControlMenu.Controls.Add(this.tabPage2);
+            this.tabControlMenu.Controls.Add(this.tabPage3);
+            this.tabControlMenu.Controls.Add(this.tabPage4);
+            this.tabControlMenu.Controls.Add(this.tabPage5);
+            this.tabControlMenu.Location = new System.Drawing.Point(12, 12);
+            this.tabControlMenu.Margin = new System.Windows.Forms.Padding(12);
+            this.tabControlMenu.Multiline = true;
+            this.tabControlMenu.Name = "tabControlMenu";
+            this.tabControlMenu.SelectedIndex = 0;
+            this.tabControlMenu.Size = new System.Drawing.Size(435, 398);
+            this.tabControlMenu.TabIndex = 7;
             // 
             // tabPage1
             // 
@@ -451,7 +451,7 @@
             // 
             this.panel2.Controls.Add(this.linkLabelGithub);
             this.panel2.Controls.Add(this.buttonConnexion);
-            this.panel2.Controls.Add(this.tabControl1);
+            this.panel2.Controls.Add(this.tabControlMenu);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 72);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
@@ -492,7 +492,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.tabControl1.ResumeLayout(false);
+            this.tabControlMenu.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
@@ -532,7 +532,7 @@
         private PictureBox pictureBox1;
         private Label label2;
         private Label label1;
-        private TabControl tabControl1;
+        private TabControl tabControlMenu;
         private TabPage tabPage1;
         private TabPage tabPage2;
         private TabPage tabPage3;

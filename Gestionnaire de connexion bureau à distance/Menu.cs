@@ -34,7 +34,11 @@ namespace MSTSC_Manager
         private void listBoxServeurs_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             int index = this.listBoxServeurs.IndexFromPoint(e.Location);
-            if (index != ListBox.NoMatches)
+            if (index == 0)
+            {
+                this.tabControlMenu.SelectedTab = this.tabControlMenu.TabPages[1];
+            }
+            else if (index > 0 && this.buttonConnexion.Enabled)
             {
                 this.buttonConnexion_Click(null, new EventArgs());
             }
