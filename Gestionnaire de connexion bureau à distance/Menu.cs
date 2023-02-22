@@ -89,6 +89,8 @@ namespace MSTSC_Manager
 
                 this.textBoxIdentifiant.Text = "";
                 this.textBoxMotDePasse.Text = "";
+
+                this.lastIndex = index;
             }
         }
 
